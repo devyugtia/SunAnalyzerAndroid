@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bottomSheetClickMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCardBack"
+            app:cardCornerRadius="@dimen/_10mdp"
+            app:cardElevation="@dimen/_10mdp">
+
+            <LinearLayout
+                style="@style/llVerticalMatchWrap"
+                android:gravity="center">
+
+                <LinearLayout
+                    style="@style/llVerticalMatchWrap"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/textViewStyleLarge"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_8mdp"
+                        android:text="WorkArea"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/llVerticalMatchWrap"
+                    android:background="@color/white"
+                    android:padding="@dimen/_15mdp">
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/textInputLayoutStyle"
+                        android:hint="@string/pitch_distance_in_meter">
+
+                        <EditText
+                            android:id="@+id/edtPitchDistance"
+                            style="@style/edtStyleNumeric"
+                            android:digits="0123456789."
+                            android:imeOptions="actionNext"
+                            android:inputType="numberDecimal"
+                            android:maxLength="5" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout style="@style/llHorizontalMatchWrap">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/textInputLayoutStyle"
+                            android:layout_weight="1"
+                            android:hint="@string/panel_tilt">
+
+                            <EditText
+                                android:id="@+id/edtPanelTilt"
+                                style="@style/edtStyleNumeric"
+                                android:digits="0123456789."
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Space
+                            android:layout_width="@dimen/_20mdp"
+                            android:layout_height="match_parent" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/textInputLayoutStyle"
+                            android:layout_weight="1"
+                            android:hint="@string/azimuth_angle">
+
+                            <EditText
+                                android:id="@+id/edtAzimuthAngel"
+                                style="@style/edtStyleNumeric"
+                                android:digits="0123456789."
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <LinearLayout style="@style/llHorizontalMatchWrap">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/textInputLayoutStyle"
+                            android:layout_weight="1"
+                            android:hint="@string/wp_per_panel">
+
+                            <EditText
+                                android:id="@+id/edtWpPerPanel"
+                                style="@style/edtStyleNumeric"
+                                android:digits="0123456789."
+                                android:imeOptions="actionNext"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Space
+                            android:layout_width="@dimen/_20mdp"
+                            android:layout_height="match_parent" />
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            style="@style/textInputLayoutStyle"
+                            android:layout_weight="1"
+                            android:hint="@string/offset_in_meter">
+
+                            <EditText
+                                android:id="@+id/edtOffset"
+                                style="@style/edtStyleNumeric"
+                                android:digits="0123456789."
+                                android:imeOptions="actionDone"
+                                android:inputType="numberDecimal"
+                                android:maxLength="5" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/textInputLayoutStyle"
+                        android:layout_weight="1"
+                        android:hint="Layout Type">
+
+                        <EditText
+                            android:id="@+id/edtLayoutType"
+                            style="@style/edtStyleNumeric"
+                            android:clickable="true"
+                            android:focusable="false" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <TextView
+                        style="@style/headerTextStyle"
+                        android:layout_marginTop="@dimen/_10mdp"
+                        android:gravity="left"
+                        android:hint="Panel Type :"
+                        android:textColor="@color/black" />
+
+                    <LinearLayout style="@style/llEditText">
+
+                        <LinearLayout
+                            style="@style/llHorizontalMatchWrap"
+                            android:layout_marginTop="@dimen/_5mdp"
+                            android:gravity="center">
+
+                            <RadioGroup
+                                android:id="@+id/rgRoadToSite"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/radioHorizontal"
+                                    style="@style/myRadioButton"
+                                    android:checked="true"
+                                    android:text="Horizontal" />
+
+                                <androidx.appcompat.widget.AppCompatRadioButton
+                                    android:id="@+id/radioVertical"
+                                    style="@style/myRadioButton"
+                                    android:layout_marginLeft="@dimen/_15mdp"
+                                    android:text="Vertical" />
+                            </RadioGroup>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/buttonSubmit"
+                        style="@style/ButtonStyle"
+                        android:layout_width="@dimen/_100mdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15mdp"
+                        android:text="@string/btn_update" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

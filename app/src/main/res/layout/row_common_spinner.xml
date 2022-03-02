@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.sunanalyzer.app.model.SpinnerOptionModel" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/llMainImage"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30mdp"
+        android:layout_marginHorizontal="@dimen/_4mdp"
+        android:layout_marginVertical="@dimen/_2mdp"
+        app:cardBackgroundColor="@color/colorCardBack"
+        app:cardCornerRadius="@dimen/_5mdp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            style="@style/llVerticalMatchMatch"
+            android:gravity="center"
+            >
+        <LinearLayout
+            style="@style/llHorizontalMatchWrap"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/_10mdp"
+            android:paddingVertical="@dimen/_7mdp">
+
+            <ImageView
+                setVisibility="@{!model.logo.empty}"
+                android:layout_width="@dimen/_20mdp"
+                android:layout_height="@dimen/_20mdp"
+                android:layout_marginEnd="@dimen/_10mdp"
+                loadImage="@{model.logo}"
+                />
+
+            <TextView
+                android:id="@+id/txtName"
+                style="@style/textViewStyleSmall"
+                android:layout_weight="1"
+                android:text="@{model.value.empty?model.name:model.value}" />
+
+            <ImageView
+                android:id="@+id/imgSelect"
+                visibilityOnFlag="@{model.isSelected}"
+                android:layout_width="@dimen/_15mdp"
+                android:layout_height="@dimen/_15mdp"
+                android:src="@drawable/ic_check_mark" />
+        </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginHorizontal="@dimen/_20mdp"
+                android:layout_marginTop="@dimen/_3mdp"
+                android:background="#bcbcbc"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

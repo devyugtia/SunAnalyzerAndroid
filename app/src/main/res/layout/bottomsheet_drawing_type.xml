@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/bottomSheetClickMe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:behavior_hideable="false"
+        app:behavior_peekHeight="0dp"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorCardBack"
+            app:cardCornerRadius="@dimen/_10mdp"
+            app:cardElevation="@dimen/_10mdp">
+
+            <LinearLayout
+                style="@style/llVerticalMatchWrap"
+                android:gravity="center">
+
+                <LinearLayout
+                    style="@style/llVerticalMatchWrap"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center">
+
+                    <TextView
+                        style="@style/textViewStyleLarge"
+                        android:gravity="center"
+                        android:paddingVertical="@dimen/_8mdp"
+                        android:text="Drawing Type"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/llVerticalMatchWrap"
+                    android:background="@color/white"
+                    android:padding="@dimen/_15mdp">
+
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup"
+                        style="@style/radioButtonStyle"
+                        android:layout_gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/radioBtnWorkArea"
+                            style="@style/radioButtonStyle"
+                            android:checked="true"
+                            android:text="Work Area"
+                            android:textSize="@dimen/_15mdp" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtnShadow"
+                            style="@style/radioButtonStyle"
+                            android:text="Shadow"
+                            android:textSize="@dimen/_15mdp" />
+
+                        <RadioButton
+                            android:id="@+id/radioBtnFreeArea"
+                            style="@style/radioButtonStyle"
+                            android:text="Free Area"
+                            android:textSize="@dimen/_15mdp" />
+                    </RadioGroup>
+
+
+                    <Button
+                        android:id="@+id/buttonSubmit"
+                        style="@style/ButtonStyle"
+                        android:layout_width="@dimen/_150mdp"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_15mdp"
+                        android:text="Save" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "34708762365",
+    "project_id": "sunanalyzer-daca3",
+    "storage_bucket": "sunanalyzer-daca3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34708762365:android:aac85054ff3033aee7d894",
+        "android_client_info": {
+          "package_name": "com.sunanalzer.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34708762365-1ogrmlsrhjqt81riapvl2gj8ouqa7n1j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmuN99RE_UOoAsna7_FeHqMQ4kfSYieKs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34708762365-1ogrmlsrhjqt81riapvl2gj8ouqa7n1j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

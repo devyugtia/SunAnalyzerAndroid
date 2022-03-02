@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SunAnalyzer</string>
+    <string name="ft2">ft<sup>2</sup></string>
+    <string name="m2">m<sup>2</sup></string>
+    <string name="ft">ft</string>
+    <string name="m">m</string>
+    <string name="key_google_map">AIzaSyBmuN99RE_UOoAsna7_FeHqMQ4kfSYieKs</string>
+    <string name="pitch_distance_in_meter">Pitch Distance (In Meter)</string>
+    <string name="panel_tilt">Panel Tilt °</string>
+    <string name="azimuth_angle">Azimuth Angle °</string>
+    <string name="wp_per_panel">Wp per Panel</string>
+    <string name="offset_in_meter">Offset (in Meter)</string>
+    <string name="btn_update">Update</string>
+</resources>

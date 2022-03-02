@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F9B120</color>
+    <color name="colorPrimaryDark">#F9B120</color>
+    <color name="colorAccent">#F9B120</color>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorTextHint">#686868</color>
+    <color name="colorEdittextHint">#B8B8B8</color>
+    <color name="editTextDisableBackgroundColor">#F4F4F4</color>
+    <color name="editTextFocusedColor">#FFFFFF</color>
+    <color name="editTextEnableBackgroundColor">#FFFFFF</color>
+    <color name="windowBackground">#F8F4EA</color>
+
+    <color name="colorCardBack">#FFFFFF</color>
+    <color name="colorFlatIcon">#bcbcbc</color>
+    <color name="colorMenuIcon">#092536</color>
+
+    <color name="colorToolbarText">#FFFFFF</color>
+    <color name="colorProgressBar">#0F7B57</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="color_transparent_black">#f2000000</color>
+    <color name="colorDivider">#80ACACAC</color>
+    <color name="colorLink">#03A9F4</color>
+
+    <color name="colorOTPGrey">#F3F3F3</color>
+    <color name="buttonBgColor">@color/colorPrimary
+    </color>  <!--set here If you need to set button background color manually else it will take primary color as button background-->
+    <color name="buttonBgDisableColor">#FCD88F</color>
+    <color name="buttonTextColor">#FFFFFF</color>
+    <color name="toolbarColorArrow">#FFFFFF</color>
+    <color name="colorGreen">#189C14</color>
+    <color name="colorRed">#FF003B</color>
+    <color name="colorBlue">#03A9F4</color>
+    <color name="colorYellow">#F9B120</color>
+    <color name="headerBackgroundColor">#fff</color>
+    <color name="inActiveDotColor">#8E8D8D</color>
+    <color name="ActiveDotColor">#FFFFFF</color>
+    <color name="inActiveBackground">#e8e8e8</color>
+
+    <color name="colorResidential">#F9B120</color>
+    <color name="colorIndustrial">#7323DC</color>
+    <color name="colorGovernment">#C00000</color>
+    <color name="colorCommercial">#138808</color>
+    <color name="colorAgriculture">#93CDDD</color>
+
+</resources>

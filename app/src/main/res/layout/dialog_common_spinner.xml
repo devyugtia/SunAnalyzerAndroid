@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="isShowSearchBar"
+            type="Boolean" />
+        <variable
+            name="isTyping"
+            type="Boolean" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="@dimen/_10mdp"
+            app:cardElevation="@dimen/_2mdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_bottomsheet"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/txt_dialog_title"
+                        style="@style/textViewStyleRegular"
+                        android:layout_width="match_parent"
+                        android:layout_height="?actionBarSize"
+                        android:layout_gravity="center"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:maxLines="1"
+                        android:paddingStart="@dimen/_10mdp"
+                        android:paddingEnd="@dimen/_30mdp"
+                        android:textColor="@color/white" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageViewCancel"
+                        android:layout_width="@dimen/_24mdp"
+                        android:layout_height="@dimen/_24mdp"
+                        android:layout_gravity="end|center"
+                        android:layout_marginEnd="@dimen/_8mdp"
+                        android:padding="@dimen/_3mdp"
+                        app:srcCompat="@drawable/ic_close"
+                        app:tint="@color/white" />
+
+                </FrameLayout>
+
+                <include
+                    android:id="@+id/layoutSearchBar"
+                    layout="@layout/layout_search_bar"
+                    bind:isTyping="@{isTyping}"
+                    setVisibility="@{isShowSearchBar}" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_option_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginVertical="@dimen/_10mdp"
+                    android:layout_weight="1"
+                    android:clipToPadding="false"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/_30mdp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_common_spinner" />
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardViewClearSelection"
+                    android:layout_width="@dimen/_150mdp"
+                    android:layout_height="@dimen/_30mdp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/_10mdp"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="@dimen/_15mdp">
+
+                    <TextView
+                        style="@style/textViewStyleRegular"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="lear Selection"
+                        android:textColor="@color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</layout>
